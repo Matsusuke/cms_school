@@ -48,28 +48,9 @@ function sendInfoToDB($data['username'], $data['password'], $data['email'])
 {
 	
 }
+include 'header.php';
 ?>
 
-
-
-
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset='utf-8'>
-		<title>Prosta aplikacja PHP - Rejestracja do serwisu</title>
-	</head>
-	<body>
-		<div id='site'>
-			<header>
-				<div id='header-logo'>
-					<div id='header-text'>
-					</div>
-				</div>
-				<div id='header-nav'>
-				<nav></nav>
-				</div>
-			</header>
 			<div id='leftcol'>
 				<div class='panel'>
 					<div class='panel-title-bar'>
@@ -100,18 +81,6 @@ function sendInfoToDB($data['username'], $data['password'], $data['email'])
 					</div>
 				</div>
 			</div>
-			<footer>
-				<div id='footer-bg'>
-					<div id='footer-nav'>
-						<nav></nav>
-					</div>
-					<div id='footer-text'>
-					</div>
-				</div>
-			</footer>
-	</body>
-</html>
-
 <?php
 include 'footer.php';
 ?>
