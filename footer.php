@@ -1,9 +1,3 @@
-<?php
-
-// close database connection
-$mysqli->close();
-
-?>
 	<footer>
 		<div id='footer-nav'>
 		</div>
@@ -13,3 +7,11 @@ $mysqli->close();
 	</div>
 </body>
 </html>
+<?php
+
+// close database connection
+$mysqli->close();
+
+//clean-up buffer
+ob_end_flush();
+?>
