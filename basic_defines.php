@@ -1,13 +1,15 @@
 <?php
 // Set-up directories addresses.
-DEFINE ("BASE", "/");
+DEFINE ("BASE", "".$_SERVER['SERVER_ADDR']."/cms/");
 DEFINE ("ADMIN", BASE."administration_area/");
+DEFINE ("INCLUDES", BASE."includes/");
 DEFINE ("CONFIG", INCLUDES."config/");
 DEFINE ("IMAGES", BASE."images/");
-DEFINE ("INCLUDES", BASE."includes/");
 DEFINE ("LIBRARIES", INCLUDES."libraries/");
-DEFINE ("THEMES", BASE."themes/")
-DEFINE ("UPLOADS", BASE."uploads");
+DEFINE ("LOCALES", BASE."locales/");
+DEFINE ("THEMES", BASE."themes/");
+DEFINE ("UPLOADS", BASE."uploads/");
+
 
 
 

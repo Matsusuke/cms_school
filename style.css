@@ -7,22 +7,17 @@
 
 HTML
 {
-	
+	background-color: #C0C0C0;
+	color:#000000;
 }
-
-
-
-
-
-
-
 
 BODY
 {
-	
+	background-color: #C0C0C0;
+	color:#000000;
+	line-height:1,5;
+	font-family: Arial, Helvetica, sans-serif;
 }
-
-
 
 a
 {
@@ -50,16 +45,22 @@ a:visited
 
 div
 {
-	
+	position:block;
 }
 
 
 footer
-
+{
+	position:relative;
+	width:970px;
+}
 
 
 header
 {
+
+	position:relative;
+	width:970px;
 	
 }
 
@@ -79,7 +80,7 @@ img
 
 img .img-left
 {
-	
+	float:right;
 }
 
 
@@ -87,6 +88,7 @@ img .img-left
 
 img .img-right
 {
+	float:left;
 	
 }
 
@@ -94,7 +96,7 @@ img .img-right
 
 img .img-center
 {
-	
+	margin: 0 auto;
 }
 
 nav
@@ -112,12 +114,77 @@ span
 
 P
 {
+	font-size:12px;
+}
+
+label 
+{
+    width: 150px;
+    margin: 5px 0;
+    float: left;
+    clear: left;
+}
+
+input
+{
+	width:150px;
+	float:left;
+}
+
+#submit
+{
+	margin: 0 auto;
+	text-align:center;
+}
+
+.site
+{
+	width:970px;
+	height:100%;
+	background-image:url('images/primary-bg.png');
+	
+}
+
+#centercol
+{
+	display:inline-block;
+	margin:0 auto;
+	text-align:center;
+	width:310px;
 	
 }
 
 
+#leftcol
+{
+	display:inline-block;
+	float:left;
+	width:310px;
+} 
 
+#rightcol
+{
+	display:inline-block;
+	float:right;
+	width:310px;
+}
 
+.message-box
+{
+	margin: 0 auto;
+	border: 2px solid;
+	border-color:red;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;	
+	background-color:#000000;
+	text-align:center;
+	width:310px;
+}
 
-
-
+.panel 
+{
+	border: 3px solid;
+	border-radius:3px;
+	
+}

@@ -1,17 +1,13 @@
 <?php
-include 'basic_functions.php';
-include 'database_basic_operations.php';
-
-connectToDatabase($db_adress, $db_name, $db_user, $db_pass);
-
-
+require_once 'core.php';
 
 ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<meta charset='utf-8'>
-		<title>Prosta aplikacja PHP - Rejestracja do serwisu</title>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+		<title></title>
+		<link rel='stylesheet' href='style.css' />
 	</head>
 	<body>
 		<div id='site'>
@@ -21,6 +17,8 @@ connectToDatabase($db_adress, $db_name, $db_user, $db_pass);
 					</div>
 				</div>
 				<div id='header-nav'>
-				<nav></nav>
+				<nav>
+				
+				</nav>
 				</div>
 			</header>

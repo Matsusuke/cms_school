@@ -10,8 +10,8 @@
 <?php
 
 // close database connection
-$mysqli->close();
+$mysqli_close;
 
 //clean-up buffer
-ob_end_flush();
+//ob_end_flush();
 ?>

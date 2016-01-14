@@ -1,9 +1,18 @@
 <?php
-include 'core.php';
+require_once 'core.php';
 include 'header.php';
+include 'LOCALES."Polish/login.php"';
 
 
+
+function checkLoginData($data)
+{
+	
+}
 ?>
+
+
+
 			<div id='leftcol'>
 				<div class='panel'>
 					<div class='panel-title-bar'>

@@ -1,17 +1,19 @@
 <?php
-include 'basic_functions.php';
-include 'basic_defines.php';
+require_once 'core.php';
+require_once 'header.php';
+include_once LOCALES."$config_info['language']/register.php";
 
 function hashpass ($password)
 {
 
-	sha1($password);
-	return $password;
+	$hash = sha1($password);
+	$password = $password.$hash;
+	return $hash;
 
 }
 
 // Back-end verification of form data
-function verifyInfo ($data['username'], $data['password'], $_POST['email'])
+function verifyInfo ($data)
 {
 	if(!isset($data['username']))
 	{
@@ -31,7 +33,7 @@ function verifyInfo ($data['username'], $data['password'], $_POST['email'])
 	}
 }
 
-function checkEmailRegExp ($_POST['email'])
+function checkEmailRegExp ()
 {
 	if(preg_match('/^[a-zA-Z0-9\.\-_]+\@[a-zA-Z0-9\.\-_]+\.[a-z]{2,4}$/D', $_POST['email']))
 	{
@@ -44,9 +46,9 @@ function checkEmailRegExp ($_POST['email'])
 }
 
 
-function sendInfoToDB($data['username'], $data['password'], $data['email'])
+function sendInfoToDB($data)
 {
-	
+	$register_query = mysql_query("INSERT INTO Users VALUES '','".$data['username']."','".$data['password']."','".$data['email']."','0','$hash','0'");
 }
 include 'header.php';
 ?>
@@ -68,6 +70,14 @@ include 'header.php';
 						</div>
 					</div>
 					<div id='centercol-panel-content'>
+						<form id='register-form' method='post' action='register.php'>
+							<label>Nazwa użytkownika:</label><input type='text' id='username' maxlength ='64' name='username' /><br />
+							<label>Hasło:</label><input type='text' id='password' maxlength ='64' name='password' /><br />
+							<label>Powtórz hasło:</label><input type='text' id='pass-repeat' maxlength ='64' name='pass-repeat' /><br />
+							<label>Adres email:</label><input type='text' id='email' maxlength ='64' name='email' /><br />
+							<input type='reset' id='reset' name='reset' />
+							<input type='submit' id='submit' name='submit' />
+						</form>
 					</div>
 				</div>
 			</div>
@@ -82,5 +92,10 @@ include 'header.php';
 				</div>
 			</div>
 <?php
-include 'footer.php';
+if (isset($POST['submit']))
+{
+	sendInfoToDB();
+}
+			
+require_once 'footer.php';
 ?>
